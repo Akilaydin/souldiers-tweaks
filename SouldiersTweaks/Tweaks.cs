@@ -65,13 +65,13 @@ namespace SouldiersTweaks
         {
             loggerInstance.Msg(message);
         }
-
-        public override void OnApplicationLateStart()
+        
+        public override void OnLateInitializeMelon()
         {
-            base.OnApplicationLateStart();
-
             loggerInstance = LoggerInstance;
             
+            Log("ASsaas");
+
             windowBackground = new Texture2D(1, 1, TextureFormat.RGBAFloat, false);
             windowBackground.SetPixel(0, 0, new Color32(91, 34, 66, 230));
             windowBackground.Apply();

@@ -31,16 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=2.9.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="0Harmony">
+      <HintPath>S:\Program Files (x86)\Steam\steamapps\common\Souldiers\MelonLoader\net35\0Harmony.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>D:\Steam\steamapps\common\Souldiers\Souldiers_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>S:\Program Files (x86)\Steam\steamapps\common\Souldiers\Souldiers_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="MelonLoader">
-      <HintPath>D:\Steam\steamapps\common\Souldiers\MelonLoader\MelonLoader.dll</HintPath>
+      <HintPath>S:\Program Files (x86)\Steam\steamapps\common\Souldiers\MelonLoader\net35\MelonLoader.dll</HintPath>
     </Reference>
-    <Reference Include="PlayMaker, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Steam\steamapps\common\Souldiers\Souldiers_Data\Managed\PlayMaker.dll</HintPath>
+    <Reference Include="PlayMaker">
+      <HintPath>S:\Program Files (x86)\Steam\steamapps\common\Souldiers\Souldiers_Data\Managed\PlayMaker.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,19 +52,20 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>D:\Steam\steamapps\common\Souldiers\Souldiers_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>S:\Program Files (x86)\Steam\steamapps\common\Souldiers\Souldiers_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>D:\Steam\steamapps\common\Souldiers\Souldiers_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>S:\Program Files (x86)\Steam\steamapps\common\Souldiers\Souldiers_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Steam\steamapps\common\Souldiers\Souldiers_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>S:\Program Files (x86)\Steam\steamapps\common\Souldiers\Souldiers_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>D:\Steam\steamapps\common\Souldiers\Souldiers_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <HintPath>S:\Program Files (x86)\Steam\steamapps\common\Souldiers\Souldiers_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>S:\Program Files (x86)\Steam\steamapps\common\Souldiers\Souldiers_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Patch\LedgeDetectorPatch.cs" />
@@ -109,6 +111,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetPath)" "D:\Steam\steamapps\common\Souldiers\Mods" /Y /H</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(TargetPath)" "S:\Program Files (x86)\Steam\steamapps\common\Souldiers\Mods" /Y /H</PostBuildEvent>
   </PropertyGroup>
 </Project>
