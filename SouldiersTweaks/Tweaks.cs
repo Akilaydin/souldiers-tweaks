@@ -70,7 +70,12 @@ namespace SouldiersTweaks
         {
             loggerInstance = LoggerInstance;
             
-            Log("ASsaas");
+            AppDomain.CurrentDomain.UnhandledException += (sender, e) =>
+            {
+                var ex = e.ExceptionObject as Exception;
+                Log($"[UnhandledException] {ex?.Message}\n{ex?.StackTrace}");
+            };
+            
 
             windowBackground = new Texture2D(1, 1, TextureFormat.RGBAFloat, false);
             windowBackground.SetPixel(0, 0, new Color32(91, 34, 66, 230));
@@ -176,12 +181,16 @@ namespace SouldiersTweaks
         void TweaksWindow(int windowId)
         {
             GUI.color = new Color32(255, 204, 211, 255);
-
+            
             if (null == Utility.GetPlayerCurrentStats())
             {
+                Log("TweaksWindow Null" + windowId);
+
                 GUILayout.Label("Waiting for game to start");
                 return;
             }
+            
+            Log("RENDER TWEAKS ENTER" + windowId);
 
             RenderTweaks();
 
@@ -206,6 +215,8 @@ namespace SouldiersTweaks
 
         private void RenderTweaks()
         {
+            Log("Render tweaks" + windowId);
+
             GUILayout.BeginHorizontal(paddingTopStyle);
                 GUILayout.BeginVertical();
                     GUI.skin.label.alignment = TextAnchor.MiddleCenter;

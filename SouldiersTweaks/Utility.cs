@@ -65,19 +65,19 @@ namespace SouldiersTweaks
         {
             var currentStats = PlayerCurrentStats.GetPlayerCurrentStats();
 
-            if (Utility.IsPlayerArcher())
+            if (IsPlayerArcher())
             {
-                return (ArcherCurrentStats) currentStats;
+                return currentStats as ArcherCurrentStats;
             }
 
-            if (Utility.IsPlayerWizard())
+            if (IsPlayerWizard())
             {
-                return (WizardCurrentStats) currentStats;
+                return currentStats as WizardCurrentStats;
             }
 
-            if (Utility.IsPlayerSoldier())
+            if (IsPlayerSoldier())
             {
-                return (SoldierCurrentStats) currentStats;
+                return currentStats as SoldierCurrentStats;
             }
 
             return currentStats;
